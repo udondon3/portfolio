@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/stylesHP.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
@@ -37,6 +38,7 @@
           <li><a href="#introduction" class="side_text">CONCEPT<span>コンセプト</span></a></li>
           <li><a href="#" class="side_text">MENU<span>メニュー</span></a></li>
           <li><a href="#access" class="side_text">ACCESS<span>アクセス</span></a></li>
+          <li class="hide_element"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt" target="_blank">予約する</a></li>
         </ul>
         <ul>
           <li><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_tabelogBt" target="_blank">RESERVE 食べログで予約する</a></li>
@@ -60,9 +62,11 @@
 
     <main role="main" >
       <div class="hero_top">
+        <img  src="img/sub-title.png" alt="サブタイトル画像" />
         <img  src="img/hero-top.png" alt="トップ画像" />
       </div>
 
+      <div class="appeal_box">
       <div class="appeal_text">
         <img
           class="title_text"
@@ -72,38 +76,22 @@
         <h1>お肉の旨みを最後の一滴まで。</h1>
         <p>
           一人一鍋で楽しむ新しいスタイルのしゃぶしゃぶを
-          <span class="spacer"></span><br />
-          お届けします。<span class="spacer"></span><br />
-          座席はすべてカウンターの横並び席で、<span class="spacer"></span><br />
-          ゆったりとお食事を楽しめます。<span class="spacer"></span><br />
-          こだわりのポイントは≪熟成肉≫をお客様の<span class="spacer"></span
-          ><br />
-          目の前で職人がスライスする贅沢な体験と、<span class="spacer"></span
-          ><br />
-          当店オリジナルの≪特製ポン酢とごまだれ≫です。<span
-            class="spacer"
-          ></span
-          ><br />
-          厳選したご飯や新鮮な野菜と一緒にご堪能ください。<span
-            class="spacer"
-          ></span
-          ><br />
-          しゃぶしゃぶを楽しんだ後は、<span class="spacer"></span><br />
-          ポン酢だれに出汁湯を加えてスープにするとまた<span
-            class="spacer"
-          ></span
-          ><br />
-          違った美味しさが楽しめます。<span class="spacer"></span><br />
-          〆には肉と野菜の旨味が詰まった芳香なダシで作る<span
-            class="spacer"
-          ></span
-          ><br />
-          ラーメンが絶品です。<span class="spacer"></span><br />
-          さらに、豊富な一品料理やバラエティ豊かなメニュー<span
-            class="spacer"
-          ></span
-          ><br />
-          をご用意しておりますので、<span class="spacer"></span><br />
+          <br />
+          お届けします。<br />
+          座席はすべてカウンターの横並び席で、<br />
+          ゆったりとお食事を楽しめます。<br />
+          こだわりのポイントは≪熟成肉≫をお客様の
+          <br />
+          目の前で職人がスライスする贅沢な体験と、<br />
+          当店オリジナルの≪特製ポン酢とごまだれ≫です。<br />
+          厳選したご飯や新鮮な野菜と一緒にご堪能ください。<br />
+          しゃぶしゃぶを楽しんだ後は、<br />
+          ポン酢だれに出汁湯を<span class="text_br"></span>加えてスープにするとまた<br />
+          違った美味しさが楽しめます。<br />
+          〆には肉と野菜の旨味が詰まった芳香なダシで作る<br />
+          ラーメンが絶品です。<br />
+          さらに、豊富な一品料理や<span class="text_br"></span>バラエティ豊かなメニュー<br />
+          をご用意しておりますので、<br />
           何度訪れても飽きることがありません。
         </p>
       </div>
@@ -146,10 +134,12 @@
           charset="utf-8"
         ></script>
       </div>
+    </div>
 
       <div class="concept_section">
         <div class="introduction_content" id="introduction">
           <div class="introduction">
+            <div class="intr_box">
             <div class="introduction_img">
               <img class="intr_img" src="img/beef-illust.png" alt="和牛イラスト" />
             </div>
@@ -162,8 +152,10 @@
               </p>
               <h1>《黒毛和牛》</h1>
             </div>
+          </div>
 
-            <div class="introduction">
+          <div class="intr_box">
+            <div class="introduction_img">
               <img class="intr_img" src="img/fruit-illust.png" alt="柑橘イラスト" />
             </div>
             <div class="intr_text">
@@ -177,8 +169,10 @@
               </p>
               <h1>《特製ポン酢・ごまだれ》</h1>
             </div>
+          </div>
 
-            <div class="introduction">
+          <div class="intr_box">
+            <div class="introduction_img">
               <img class="intr_img" src="img/nabe-illust.png" alt="鍋イラスト" />
             </div>
             <div class="intr_text">
@@ -193,20 +187,22 @@
               <h1>《ダシ湯》</h1>
             </div>
           </div>
+          
+          </div>
         </div>
 
         <div class="introduction_title">
           <div class="intr_ttitle">
             <h1>しゃぶはうす流</h1>
           </div>
-          <div class="intr_title">
+          <div class="intr_sideTex">
             <p>
               KODAWARI<br />
               SHABUSHABU<br />
               SHABUHOUSE
             </p>
           </div>
-          <div class="intr_ttitle">
+          <div class="intr_ttitle intr_flex">
             <h1>&nbsp;&nbsp;こだわり</h1>
             <p>美味しい</p>
           </div>

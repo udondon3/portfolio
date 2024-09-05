@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/* 
-* {
-  border: 1px solid #000;
-  box-sizing: border-box;
-} */
-
 html {
   scroll-behavior: smooth;
 }
@@ -13,7 +7,9 @@ html {
 html,
 body {
   margin: 0;
+  /* 余白をリセット */
   padding: 0;
+  /* 内側の余白をリセット */
 }
 
 
@@ -28,17 +24,88 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
+
+
+
+@media screen and (min-width:768px) {
+
+  .logo {
+    display: none;
+  }
+
+  .btn-gnavi {
+    visibility: hidden;
+
+  }
+
+  .title_logoImg {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .gnavi ul li .side_text span {
+    display: none;
+    /* span要素を非表示にする */
+  }
+
+  .side_tabelogBt {
+    position: relative;
+    color: transparent;
+
+  }
+
+  .side_tabelogBt::after {
+    content: "予約する";
+    color: #000;
+
+  }
+
+  .gnavi {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+  }
+
+  .gnavi ul {
+    list-style-type: none;
+    /* マーカーを消す */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* `ul` 内の `li` 要素も横並びにする */
+  }
+
+  .side_logo {
+    height: 40%;
+    /* ロゴのサイズ調整 */
+  }
+
+  .gnavi ul li {
+    margin-right: 20px;
+    /* `li`要素間のスペースを調整 */
+  }
+
+  .close-btn {
+    margin-left: 10px;
+    /* ボタンとロゴの間隔を調整 */
+  }
+
+  .hero_top img {
+    width: 60%;
+    height: 100%;
+  }
+
+}
+
+
 @media screen and (max-width:768px) {
 
   .hide_element {
     display: none;
   }
-
-
-  .hero_top img:nth-of-type(1) {
-    display: none;
-  }
-
 
   body::before {
     content: "";
@@ -261,10 +328,13 @@ body {
 
   .concept_section {
     display: flex;
+    padding-bottom: 10%;
+    justify-content: center;
+
   }
 
   .introduction {
-    /* margin-top: 15%; */
+    margin-top: 15%;
     display: grid;
     place-items: center;
     text-align: center;
@@ -275,43 +345,49 @@ body {
     margin: 10px auto auto auto;
   }
 
-
-  /* .introduction_title {
+  @media only screen and (max-width: 767px) {
+    .introduction_title {
       margin-right: 10%;
-    } */
+    }
+  }
 
   .introduction_content {
-    padding: 2rem 0 0 5rem;
+    margin: auto;
   }
 
   .intr_ttitle {
     display: flex;
+    /* フレックスボックスで横並びにする */
     align-items: flex-start;
-    padding-right: 3rem;
-
+    margin-left: 20%;
   }
 
   .intr_ttitle p {
     font-size: 1.2rem;
-    font-weight: 500;
   }
 
   .intr_ttitle h1 {
-    font-weight: 600;
-    /* or font-weight: 700; */
-
+    font-weight: normal;
+    /* 太字を解除する */
     font-size: 2.5rem;
   }
 
   .intr_ttitle h1,
   .intr_ttitle p {
     margin-right: 20px;
+    /* 要素間のスペースを追加（必要に応じて調整） */
     writing-mode: vertical-rl;
+    /* 縦書きの設定（右から左に） */
     text-align: left;
+    /* テキストを中央に配置 */
     margin: 0;
+    /* デフォルトのマージンをリセット */
     padding: 0;
+    /* デフォルトのパディングをリセット */
     height: auto;
+    /* 高さを設定（必要に応じて調整） */
     width: auto;
+    /* 幅を自動調整 */
 
 
   }
@@ -319,8 +395,9 @@ body {
 
   .beef_text {
     display: flex;
+    /* フレックスボックスで横並びにする */
     align-items: flex-start;
-
+    /* 縦方向の中央揃え */
   }
 
 
@@ -342,50 +419,50 @@ body {
     /* 幅を自動調整 */
   }
 
-
   .intr_text {
     display: flex;
+    /* フレックスボックスで横並びにする */
     align-items: flex-start;
-    margin: 10% 0 0 20%;
+    margin-top: 10%;
   }
 
   .intr_text h1,
   .intr_text p {
+    margin-right: 20px;
+    /* 要素間のスペースを追加（必要に応じて調整） */
     writing-mode: vertical-rl;
+    /* 縦書きの設定（右から左に） */
     text-align: left;
+    /* テキストを中央に配置 */
     margin: 0;
+    /* デフォルトのマージンをリセット */
     padding: 0;
+    /* デフォルトのパディングをリセット */
     height: auto;
+    /* 高さを設定（必要に応じて調整） */
     width: auto;
-
+    /* 幅を自動調整 */
   }
 
   .intr_text h1 {
-    margin-top: -1rem !important;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin: 10% 0 0 10%;
-  }
-
-  .intr_text p {
-    font-size: 0.7rem;
-
+    margin-top: -20% !important;
+    font-weight: normal;
   }
 
   .intr_img {
     width: 70%;
   }
 
-  .intr_sideTex {
+  .intr_title {
     text-align: center;
     font-size: 0.8rem;
   }
 
-  .intr_sideTex p {
-    text-align: center;
-    font-size: 0.8rem;
-    margin-left: -55%;
-  }
+  /* .intr_title p{
+  text-align: center;
+  margin-right: 10%;
+  font-size: 0.8rem;
+} */
 
 
   .menu_section {
@@ -624,6 +701,8 @@ body {
     background-color: orange;
     font-size: 0.6rem;
   }
+
+
 
   .footer_section {
     width: 90%;
