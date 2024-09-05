@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.85 96.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed6d00;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fffddf;
+      }
+
+      .cls-3 {
+        font-family: MidashiGoPro-MB31-90ms-RKSJ-H, 'A-OTF Midashi Go MB31 Pro';
+        font-size: 33.67px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <circle class="cls-1" cx="48.42" cy="48.42" r="48.42"/>
+      <text class="cls-3" transform="translate(12.63 69.57)"><tspan x="0" y="0">TOP</tspan></text>
+      <polygon class="cls-2" points="48.42 13.03 26.26 32.23 70.59 32.23 48.42 13.03"/>
+    </g>
+  </g>
+</svg>

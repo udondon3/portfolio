@@ -1,84 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Site</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="しゃぶハウスは、美味しいしゃぶしゃぶを提供するレストランです。"
+    />
+    <meta name="keywords" content="しゃぶしゃぶ, レストラン, 美味しい料理" />
+    <meta name="author" content="あなたの名前" />
+    <title>しゃぶハウス - 美味しいしゃぶしゃぶレストラン</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <div class="logo"><img src="logo.png" alt="Company Logo"></div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="logo">
+        <img src="img/logo.png" alt="ロゴ画像" />
+      </div>
+      <div class="title_logo">
+        <img src="img/title-logo.png" alt="ロゴ画像" />
+      </div>
+      <div class="btn-gnavi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="gnavi">
+        <ul>
+          <li><img class="side_logo" src="img/title-logo.png" alt="ロゴ画像" /><button class="close-btn">&times;</button></li>
+        </ul>
+        <ul>
+          <li><a href="#introduction" class="side_text">CONCEPT<span>コンセプト</span></a></li>
+          <li><a href="#" class="side_text">MENU<span>メニュー</span></a></li>
+          <li><a href="#access" class="side_text">ACCESS<span>アクセス</a></li>
+        </ul>
+        <ul>
+          <li><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_tabelogBt" target="_blank">RESERVE 食べログで予約する</a></li>
+          <li><p>FOLLOW</p></li>
+        </ul>
+
+    <div class="svg_buttons">
+      <a href="https://x.com/shabu_house" class="button_box">
+        <img src="img/x.svg" alt="X(旧Twitter)アイコン" class="button-icon">
+      </a>
+      <a href="https://www.instagram.com/syabuhouse/" class="button_box">
+        <img src="img/insta.svg" alt="インスタグラムアイコン" class="button-icon">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100051502822705" class="button_box">
+        <img src="img/fb.svg" alt="フェイスブックアイコン" class="button-icon">
+      </a>
+    </div>
+
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Company</h1>
-            <p>Your success is our mission.</p>
-            <a href="#services" class="cta-button">Learn More</a>
-        </div>
-    </section>
+    <main role="main" >
+      <div class="hero_top">
+        <img  src="img/hero-top.png" alt="トップ画像" />
+      </div>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Our company is committed to delivering exceptional services.</p>
-            <!-- Team members can be added here -->
-        </div>
-    </section>
+      <div class="appeal_text">
+        <img
+          class="title_text"
+          src="img/title-text.png"
+          alt="元祖一人しゃぶしゃぶ創業47 年"
+        />
+        <h1>お肉の旨みを最後の一滴まで。</h1>
+        <p>
+          一人一鍋で楽しむ新しいスタイルのしゃぶしゃぶを
+          <span class="spacer"></span><br />
+          お届けします。<span class="spacer"></span><br />
+          座席はすべてカウンターの横並び席で、<span class="spacer"></span><br />
+          ゆったりとお食事を楽しめます。<span class="spacer"></span><br />
+          こだわりのポイントは≪熟成肉≫をお客様の<span class="spacer"></span
+          ><br />
+          目の前で職人がスライスする贅沢な体験と、<span class="spacer"></span
+          ><br />
+          当店オリジナルの≪特製ポン酢とごまだれ≫です。<span
+            class="spacer"
+          ></span
+          ><br />
+          厳選したご飯や新鮮な野菜と一緒にご堪能ください。<span
+            class="spacer"
+          ></span
+          ><br />
+          しゃぶしゃぶを楽しんだ後は、<span class="spacer"></span><br />
+          ポン酢だれに出汁湯を加えてスープにするとまた<span
+            class="spacer"
+          ></span
+          ><br />
+          違った美味しさが楽しめます。<span class="spacer"></span><br />
+          〆には肉と野菜の旨味が詰まった芳香なダシで作る<span
+            class="spacer"
+          ></span
+          ><br />
+          ラーメンが絶品です。<span class="spacer"></span><br />
+          さらに、豊富な一品料理やバラエティ豊かなメニュー<span
+            class="spacer"
+          ></span
+          ><br />
+          をご用意しておりますので、<span class="spacer"></span><br />
+          何度訪れても飽きることがありません。
+        </p>
+      </div>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <!-- Service items go here -->
-        </div>
-    </section>
+      <div class="twitter_box">
+        <blockquote class="twitter-tweet">
+          <p lang="ja" dir="ltr">
+            こんにちは！<br />お盆も終わりディナー営業もスタートしてます！<br /><br />まだまだ暑いですが、涼しい店内で一人しゃぶしゃぶいかがでしょうか😋<br />写真はランチの豚肩ロースしゃぶしゃぶセットのお肉です🐖<br /><br />ご来店お待ちしております🙌<a
+              href="https://twitter.com/hashtag/%E5%A4%A7%E9%98%AA%E3%83%A9%E3%83%B3%E3%83%81?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#大阪ランチ</a
+            >
+            <a
+              href="https://twitter.com/hashtag/%E6%A2%85%E7%94%B0%E3%83%A9%E3%83%B3%E3%83%81?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#梅田ランチ</a
+            >
+            <a
+              href="https://twitter.com/hashtag/%E5%8C%97%E6%96%B0%E5%9C%B0%E3%83%A9%E3%83%B3%E3%83%81?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#北新地ランチ</a
+            >
+            <a
+              href="https://twitter.com/hashtag/%E3%81%97%E3%82%83%E3%81%B6%E3%81%97%E3%82%83%E3%81%B6?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#しゃぶしゃぶ</a
+            >
+            <a
+              href="https://twitter.com/hashtag/%E3%81%97%E3%82%83%E3%81%B6%E3%81%97%E3%82%83%E3%81%B6%E3%83%A9?src=hash&amp;ref_src=twsrc%5Etfw"
+              >#しゃぶしゃぶラ</a
+            >
+            <a href="https://t.co/iI3p6NJH1J">pic.twitter.com/iI3p6NJH1J</a>
+          </p>
+          &mdash; 【大阪・北新地】しゃぶはうす【元祖一人しゃぶしゃぶ創業47年】
+          (@shabu_house)
+          <a
+            href="https://twitter.com/shabu_house/status/1826090549977428412?ref_src=twsrc%5Etfw"
+            >August 21, 2024</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
 
-    <!-- News Section -->
-    <section id="news">
-        <div class="container">
-            <h2>Latest News</h2>
-            <!-- News articles go here -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <!-- Contact info and map can be added here -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-            <div class="social-media">
-                <!-- Social media links go here -->
+      <div class="concept_section">
+        <div class="introduction_content" id="introduction">
+          <div class="introduction">
+            <div class="introduction_img">
+              <img class="intr_img" src="img/beef-illust.png" alt="和牛イラスト" />
             </div>
+            <div class="intr_text">
+              <p>
+                厳選した最高級の ランクの<br />
+                国産松坂牛を使用しております。<br />
+                これまでにない豊かなしゃぶしゃ<br />
+                ぶをご堪能いただけます。
+              </p>
+              <h1>《黒毛和牛》</h1>
+            </div>
+
+            <div class="introduction">
+              <img class="intr_img" src="img/fruit-illust.png" alt="柑橘イラスト" />
+            </div>
+            <div class="intr_text">
+              <p>
+                特製ポン酢は、数種類の個性派柑橘を絶妙に配合し、<br />
+                際立つ酸味が特徴。また、厳選されたごまを使用し、<br />
+                風味豊かでクリーミーな味わいに仕上げたごまだれも<br />
+                自慢の一品です。黒毛和牛と松坂豚ロースとの相性は<br />
+                抜群で、湯から上げたての肉をこの両方に潜らせると、<br />
+                至極のマリアージュをお楽しみいただけます。
+              </p>
+              <h1>《特製ポン酢・ごまだれ》</h1>
+            </div>
+
+            <div class="introduction">
+              <img class="intr_img" src="img/nabe-illust.png" alt="鍋イラスト" />
+            </div>
+            <div class="intr_text">
+              <p>
+                しゃぶはうすのダシ湯は、開店当初から受け継がれ<br />
+                る秘伝の一品です。このオリジナルのダシ湯で、<br />
+                最も美味しいしゃぶしゃぶをご堪能ください。<br />
+                さらに、ダシ湯の灰汁には旨味が凝縮されています<br />
+                ので、取り除かないでください。深いコクと風味を<br />
+                楽しめる絶品のしゃぶしゃぶをぜひお試しください
+              </p>
+              <h1>《ダシ湯》</h1>
+            </div>
+          </div>
         </div>
+
+        <div class="introduction_title">
+          <div class="intr_ttitle">
+            <h1>しゃぶはうす流</h1>
+          </div>
+          <div class="intr_title">
+            <p>
+              KODAWARI<br />
+              SHABUSHABU<br />
+              SHABUHOUSE
+            </p>
+          </div>
+          <div class="intr_ttitle">
+            <h1>&nbsp;&nbsp;こだわり</h1>
+            <p>美味しい</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu_section" id="menu">
+      <div class="title_box">
+        <h1>&nbsp;M&nbsp;E&nbsp;N&nbsp;U</h1>
+        <p>
+          厳選された素材を使用し、一品一品丁寧に<br />
+          作り上げた料理を提供しています。<br />
+          特に新鮮さが違うしゃぶしゃぶと多彩な一品料理を<br />
+          取り揃え、あなたの食欲を全力で満たします。<br />
+          自慢の料理を、心ゆくまでご堪能ください。<br />
+        </p>
+        <div class="flower_box">
+          <img class="flower1" src="img/flower2.png" alt="お花">
+          <img class="flower2" src="img/flower1.png" alt="お花">
+          <img class="flower3" src="img/flower8.png" alt="お花">
+        </div>
+      </div>
+
+      <div class="menu_box">
+        <img class="menu_img" src="img/beef.png" alt="黒毛和牛" />
+        <h1>しゃぶしゃぶ</h1>
+        <h1>《松坂牛》</h1>
+      </div>
+      <div class="menu_text">
+        <p>肉、本来の旨味を味わっていただけるように<br />
+          秘伝のダシ湯であっさり仕立てました</p>
+      </div>
+
+      <div class="menu_box">
+        <img class="menu_img" src="img/vegetables.png" alt="柑橘類" />
+        <h1>《新鮮野菜》</h1>
+      </div>
+      <div class="menu_text">
+        <p>秘伝のダシ湯で野菜本来の旨味が<br />
+          ギュッと凝縮され特製ポン酢、<br />
+          ごまだれと相性抜群です。</p>
+      </div>
+
+      <div class="menu_box">
+        <img class="menu_img" src="img/men.png" alt="〆麺" />
+        <h1>《〆麺》</h1>
+      </div>
+      <div class="menu_text">
+        <p>肉や野菜の濃縮された秘伝のダシ湯とからむ、<br />
+          細さ、食べ応えのあるコシの強さを<br />
+          両方兼ね備えたラーメンです。</p>
+      </div>
+      <div class="more_menuBt">
+        <a href="#" class="more_button">もっと見る</a>
+      </div>
+
+      <div class="title_box" id="access">
+        <h1>&nbsp;A&nbsp;C&nbsp;C&nbsp;E&nbsp;S&nbsp;S</h1>
+        <p>
+          住所<br />
+          〒530-0002<br />
+          大阪府大阪市北区曽根崎新地1-2-30<br />
+          新三ツ輪ビル&nbsp;1F<br />
+        </p>
+      </div>
+      
+      <div class="access_box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.3152090638223!2d135.4986238!3d34.69722879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6edc66b9bd5%3A0x9cea43a1c6881fee!2z44GX44KD44G244Gv44GG44GZ!5e0!3m2!1sja!2sjp!4v1725433656129!5m2!1sja!2sjp" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="table_box">
+        <img src="img/table.jpg" alt="テーブルの画像" />
+      </div>
+
+    </div>
+
+    <div class="footer_section">
+    <div class="flogo_box">
+      <img src="img/footer_logo.png" alt="フッターロゴ" />
+    </div>
+
+    <div class="button_container">
+      <a href="https://maps.app.goo.gl/LSPwRYMTz6UWS3XJA" class="map_button" target="_blank">MAP Google Map を見る</a>
+      <a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="tabelog_button" target="_blank">RESERVE 食べログで予約する</a>
+    </div>
+
+ 
+    <div class="footer_text">
+      <p class="text_item text_align">所在地</p>
+      <p class="text_item">大阪府大阪市北区曽根崎新地1-2-30<br />
+        新三ツ輪ビル　1F</p>
+    </div>
+
+    <div class="footer_text">
+      <p class="text_item text_align">電話番号</p>
+      <img class="phone_box" src="img/phone.svg" alt="電話アイコン">
+      <p class="text_item">06-6345-0106</p>
+    </div>
+
+    <div class="footer_text">
+      <p class="text_item text_align">営業時間</p>
+      <p class="text_item">18:00- 翌 03:00（ 土・日・祝 定休日）</p>
+    </div>
+
+    <div class="footer_text">
+      <p class="text_item text_align">アクセス</p>
+      <p class="text_item">JR 北新地駅から徒歩５分</p>
+    </div>
+
+    <div class="link_container">
+      <a href="#introduction" class="link_item">CONCEPT</a>
+      <a href="#" class="link_item">MENU</a>
+      <a href="#access" class="link_item">ACCESS</a>
+    </div>
+
+    <div class="svg_buttons">
+      <a href="https://x.com/shabu_house" class="button_box">
+        <img src="img/x.svg" alt="X(旧Twitter)アイコン" class="button-icon">
+      </a>
+      <a href="https://www.instagram.com/syabuhouse/" class="button_box">
+        <img src="img/insta.svg" alt="インスタグラムアイコン" class="button-icon">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100051502822705" class="button_box">
+        <img src="img/fb.svg" alt="フェイスブックアイコン" class="button-icon">
+      </a>
+    </div>
+
+  </div>
+  </div>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <img src="img/title-logo.png" alt="ロゴ画像" />
+      </div>
     </footer>
-</body>
+    
+    <script src="js/script.js"></script>
+  </body>
 </html>
