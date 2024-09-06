@@ -18,9 +18,27 @@ closeBtn.addEventListener('click', () => {
 
 // 位置スクロール
 function scrollToSection(event, sectionId) {
-  event.preventDefault(); 
+  event.preventDefault();
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' }); 
+    section.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 画像要素とリンクURL
+  const image = document.getElementById('side_logoBt');
+  const linkUrl = 'index.html'; // 遷移先のURL
+
+  // 画像が存在する場合のみクリックイベントを追加
+  if (image) {
+    image.addEventListener('click', function () {
+      window.location.href = linkUrl; // リンクURLに遷移
+    });
+
+    // 画像がクリック可能であることを示す
+    image.style.cursor = 'pointer';
+  } else {
+    console.error('要素が見つかりません。IDが正しいか確認してください。');
+  }
+});

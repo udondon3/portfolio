@@ -191,13 +191,9 @@ body {
   /* タイトルロゴ */
   .title_logoImg {
     max-width: 60%;
-    /* 横幅を親要素の幅に合わせる */
     height: auto;
-    /* 縦横比を維持しつつ高さを自動調整 */
     display: block;
-    /* 余計なスペースを排除するためにブロック表示にする */
     object-fit: cover;
-    /* 必要に応じて画像をコンテナにうまくフィットさせる */
     margin: auto;
 
   }
@@ -647,6 +643,7 @@ body {
   .phone_number {
     text-decoration: none;
     color: black;
+    font-size: 2rem;
   }
 
   .text_align {
@@ -662,8 +659,11 @@ body {
 
   }
 
-  .footer_text p {}
+  .footer_text p {
 
+  }
+
+  
   .link_container {
     display: flex;
     justify-content: space-between;

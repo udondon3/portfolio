@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* * {
+    border: 1px solid #000;
+    box-sizing: border-box;
+} */
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #fffddf;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    position: relative;
+    font-family: "Noto Serif JP", serif;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* ヘッダー関連 */
+    .logo {
+        display: none;
+    }
+
+    .btn-gnavi {
+        visibility: hidden;
+    }
+
+    .title_logoImg {
+        display: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    .gnavi ul:nth-of-type(3) {
+        display: none;
+    }
+
+    .gnavi ul li .side_text span {
+        display: none;
+    }
+
+    .svg_buttons {
+        display: none;
+    }
+
+    .side_text a,
+    .side_tabelogBt {
+        text-decoration: none;
+        display: block;
+    }
+
+
+    /* ナビゲーションバー */
+    .gnavi {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .gnavi ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    .gnavi li {
+        margin: 0 15px;
+    }
+
+    .gnavi a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .side_logo {
+        height: 5rem;
+        cursor: pointer;
+    }
+
+    .side_reserveBt {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: black;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .gnavi p {
+        color: #fff;
+        margin: 0;
+    }
+
+
+    .menu_top {
+        text-align: center;
+    }
+
+    /* メニュー */
+    .menu_title {
+        text-align: center;
+    }
+
+    .menu_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        text-align: center;
+        margin: 0 4rem;
+        /* 横方向に適度な余白を追加 */
+    }
+
+    .menu_img img {
+        width: 100%;
+        /* 画像をレスポンシブに */
+        height: auto;
+    }
+
+
+    .add_title {
+        text-align: center;
+    }
+
+    .item_price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .add_box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add_table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        font-size: 3.5rem;
+        margin: 0 10rem;
+    }
+
+    .add_table tbody {
+        margin: 0;
+    }
+
+
+    .add_table td {
+        border: none;
+        text-align: center;
+        padding: 0; /* セル内の余白を削除 */
+        line-height: 1.5; /* 行間を調整して上下のスペースを削除 */
+        border-bottom: black 4px solid;
+    }
+
+    .add_table td:first-child {
+        text-align: left;
+    }
+
+    .add_table td:nth-child(2) {
+        text-align: right;
+    }
+
+
+
+    /* お鍋 */
+    .onabe_title {
+        text-align: center;
+    }
+
+    .onabe_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .onabe_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        text-align: center;
+        margin: 0 4rem;
+        /* 横方向に適度な余白を追加 */
+    }
+
+    .onabe_img img {
+        width: 100%;
+        /* 画像をレスポンシブに */
+        height: auto;
+    }
+
+
+
+
+}

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <title>しゃぶハウス - メニュー</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="ロゴ画像" />
+    </div>
+    <div class="title_logo">
+      <a href="#"><img class="title_logoImg" src="img/title-logo.png" alt="ロゴ画像" /></a>
+    </div>
+    <div class="btn-gnavi">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="gnavi">
+      <ul>
+        <li><img  id="side_logoBt" class="side_logo" src="img/title-logo.png" alt="ロゴ画像" /><button class="close-btn">&times;</button></li>
+      </ul>
+      <ul>
+        <li><a href="index.html#introduction" class="side_text">CONCEPT<span>コンセプト</span></a>
+        </li>
+        <li><a href="#" class="side_text">MENU<span>メニュー</span></a></li>
+        <li><a href="#" onclick="scrollToSection(event,'access')" class="side_text">ACCESS<span>アクセス</span></a></li>
+        <li class="hide_element"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt"
+            target="_blank">予約する</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_tabelogBt" target="_blank">RESERVE
+            食べログで予約する</a></li>
+        <li>
+          <p>FOLLOW</p>
+        </li>
+      </ul>
+
+      <div class="svg_buttons">
+        <a href="https://x.com/shabu_house" class="button_box">
+          <img src="img/x.svg" alt="X(旧Twitter)アイコン" class="button-icon">
+        </a>
+        <a href="https://www.instagram.com/syabuhouse/" class="button_box">
+          <img src="img/insta.svg" alt="インスタグラムアイコン" class="button-icon">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100051502822705" class="button_box">
+          <img src="img/fb.svg" alt="フェイスブックアイコン" class="button-icon">
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main role="main">
+    <div class="menu_top">
+      <h1>M E N U</h1>
+    </div>
+    <section class="syabu_section">
+      <div class="menu_title">
+        <h1>ー しゃぶしゃぶ ー</h1>
+      </div>
+      <div class="menu_item">
+        <div class="menu_box">
+          <div class="menu_img">
+            <img src="img/beef.png" alt="牛しゃぶ">
+          </div>
+          <div class="menu_text">
+            <p>牛しゃぶ</p>
+          </div>
+          <div class="menu_price">
+            <p>4,800円</p>
+          </div>
+        </div>
+        <div class="menu_box">
+          <div class="menu_img">
+            <img src="img/beef.png" alt="豚しゃぶ">
+          </div>
+          <div class="menu_text">
+            <p>牛しゃぶ</p>
+          </div>
+          <div class="menu_price">
+            <p>4,500円</p>
+          </div>
+        </div>
+        <div class="menu_box">
+          <div class="menu_img">
+            <img src="img/beef.png" alt="牛・豚しゃぶ">
+          </div>
+          <div class="menu_text">
+            <p>牛しゃぶ</p>
+          </div>
+          <div class="menu_price">
+            <p>4,500円</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price_section">
+      <div class="add_title">
+        <h1>ー 追加 ー</h1>
+      </div>
+
+      <div class="item_price">
+        <div class="add_box">
+          <table class="add_table">
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="onabe_section">
+      <div class="onabe_title">
+        <h1>ー お鍋 ー</h1>
+      </div>
+      <div class="onabe_item">
+        <div class="onabe_box">
+          <div class="onabe_img">
+            <img src="img/beef.png" alt="牛しゃぶ">
+          </div>
+          <div class="onabe_text">
+            <p>牛しゃぶ</p>
+          </div>
+          <div class="onabe_price">
+            <p>4,800円</p>
+          </div>
+        </div>
+        <div class="onabe_box">
+          <div class="onabe_img">
+            <img src="img/beef.png" alt="牛・豚しゃぶ">
+          </div>
+          <div class="onabe_text">
+            <p>牛しゃぶ</p>
+          </div>
+          <div class="onabe_price">
+            <p>4,500円</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price_section">
+      <div class="add_title">
+        <h1>ー 一品 ー</h1>
+      </div>
+      <div class="item_price">
+        <div class="add_box">
+          <table class="add_table">
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="price_section"></section>
+    <div class="add_title">
+      <h1>ー ごはん ー</h1>
+    </div>
+    <div class="item_price">
+      <div class="add_box">
+        <table class="add_table">
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </section>
+
+    <section class="price_section">
+      <div class="add_title">
+        <h1>ー お飲み物 ー</h1>
+      </div>
+
+      <div class="item_price">
+        <div class="add_box">
+          <table class="add_table">
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+            <tr>
+              <td>追加の牛肉</td>
+              <td>4,500円</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="price_section"></section>
+    <div class="add_title">
+      <h1>ー ボトルキープ ー</h1>
+    </div>
+    <div class="item_price">
+      <div class="add_box">
+        <table class="add_table">
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+          <tr>
+            <td>追加の牛肉</td>
+            <td>4,500円</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <img src="img/title-logo.png" alt="ロゴ画像" />
+    </div>
+    <div class="flink_container">
+      <a href="#introduction" class="link_item">CONCEPT</a>
+      <a href="#" class="link_item">MENU</a>
+      <a href="#access" class="link_item">ACCESS</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
