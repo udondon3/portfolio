@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 
-* {
+/* * {
   border: 1px solid #000;
   box-sizing: border-box;
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -165,7 +165,6 @@ body {
 
   /* ✕ボタンのスタイル */
   nav.gnavi .close-btn {
-    position: absolute;
     background: none;
     border: none;
     font-size: 5rem;
