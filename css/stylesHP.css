@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-
+/* 基本設定 */
 html {
   scroll-behavior: smooth;
 }
@@ -21,20 +21,21 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
 
+  /* 全体のボックスモデル設定 */
   /* * {
     border: 1px solid #000;
     box-sizing: border-box;
   } */
 
+  /* ヘッダー関連 */
   .logo {
     display: none;
   }
 
   .btn-gnavi {
     visibility: hidden;
-
   }
 
   .title_logoImg {
@@ -57,22 +58,25 @@ body {
     display: none;
   }
 
-  .close-btn {
-    display: none;
-  }
-
   .side_text a,
   .side_tabelogBt {
     text-decoration: none;
     display: block;
-
   }
 
   .title_text {
     display: none;
   }
 
-  /* ナビ */
+  .table_box {
+    display: none;
+  }
+
+  .link_container {
+    display: none;
+  }
+
+  /* ナビゲーションバー */
   .gnavi {
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +112,6 @@ body {
     border-radius: 25px;
     font-weight: bold;
     text-align: center;
-
   }
 
   .gnavi p {
@@ -116,6 +119,7 @@ body {
     margin: 0;
   }
 
+  /* ヒーローセクション */
   .hero_top {
     display: flex;
     justify-content: center;
@@ -130,17 +134,14 @@ body {
     display: block;
     height: auto;
     object-fit: cover;
-
   }
 
   .hero_top img:first-child {
     width: 25%;
-
   }
 
   .hero_top img:nth-child(2) {
     width: 75%;
-
   }
 
   .hero_top::before {
@@ -152,13 +153,12 @@ body {
     height: 800px;
     background-color: #dec896;
     z-index: -1;
-
   }
 
+  /* アピールセクション */
   .appeal_box {
     display: flex;
     justify-content: center;
-
   }
 
   .appeal_text {
@@ -178,60 +178,57 @@ body {
     line-height: 2rem;
   }
 
-
   .twitter_box {
     flex: 1;
     max-width: 100%;
   }
 
-  .appeal_text p br:nth-of-type(2) {
-    display: none;
-  }
-
-  .appeal_text p br:nth-of-type(9) {
-    display: none;
-  }
-
-  .appeal_text p br:nth-of-type(10) {
-    display: none;
-  }
-
-  .appeal_text p br:nth-of-type(13) {
-    display: none;
-  }
-
+  /* 特定の改行を非表示 */
+  .appeal_text p br:nth-of-type(2),
+  .appeal_text p br:nth-of-type(9),
+  .appeal_text p br:nth-of-type(10),
+  .appeal_text p br:nth-of-type(13),
   .appeal_text p br:nth-of-type(14) {
     display: none;
   }
 
+  /* 改行表示用の擬似要素 */
   .text_br::before {
     content: "\A";
     white-space: pre;
   }
 
+  /* コンセプトセクション */
   .concept_section {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
+  .introduction_content {
+    width: 100%;
+  }
 
-
+  /* 横並び設定 */
   .introduction {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     flex-direction: row-reverse;
-
+    margin: 5rem;
   }
 
-  .introduction_img {
-    flex: 1;
-    max-width: 100%;
+  .introduction_content {
+    flex: 8;
   }
 
-  .introduction_img img {
-    width: 100%;
-    height: auto;
+  .introduction_title {
+    flex: 2;
+  }
+
+  /* 縦横の逆配置 */
+  .introduction > .intr_box:nth-child(2) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .intr_text {
@@ -245,7 +242,7 @@ body {
     align-items: center;
   }
 
-  .intr_ttitle {
+  .intr_title {
     writing-mode: vertical-rl;
     display: flex;
     flex-direction: column;
@@ -259,9 +256,196 @@ body {
 
   .intr_text {
     display: flex;
+    flex-direction: row;
+  }
+
+  .intr_text p,
+  .intr_text h1 {
     writing-mode: vertical-rl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* 花の非表示 */
+  .flower_box {
+    display: none;
+  }
+
+  .menu_section {
+    background-color: #223454;
+    color: white;
+  }
+
+  /* タイトルボックス */
+  .title_box {
+    text-align: center;
+    background-color: black;
+    height: 30vh;
+  }
+
+  /* メニューセクション */
+  .menu_contents {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  .menu_column {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 3rem;
+  }
+
+  .menu_contents .menu_column:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .menu_box {
     flex-direction: row-reverse;
   }
 
+  .menu_contents .menu_column:nth-child(3) .menu_box {
+    flex-direction: row;
+  }
+
+  .menu_box,
+  .menu_text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu_box h1 {
+    writing-mode: vertical-rl;
+  }
+
+  .menu_img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .menu_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+
+  /* "もっと見る" ボタンのスタイル */
+.more_menuBt {
+  text-align: center;
+  height: 20vh;
+}
+
+.more_button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white; /* 白いボーダー */
+  background-color: transparent; /* 背景色を透明に */
+  color: white; /* テキストの色を白に */
+  text-decoration: none; /* アンダーラインを削除 */
+  font-weight: bold;
+  font-size: 1rem;
+ 
+}
+
+.access_tiBox {
+  text-align: center;
+  background-color: black;
+  height: 30vh;
+}
+
+.access_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.iframe_map {
+  width: 60%;
+  height: 40vh;
+}
+
+/* フッターセクションのスタイル */
+.footer_section {
+  display: flex;
+  justify-content: space-between; /* ボックスを均等に配置 */
+  align-items: center; /* 垂直方向に中央に配置 */
+  padding: 2rem; /* フッターの内側にスペースを追加 */
+}
+
+/* 画像ボックスのスタイル */
+.fimg_box {
+  flex: 1; /* 画像ボックスが残りのスペースを占める */
+}
+
+/* 画像のスタイル */
+.fimg_box img {
+  width: 100%; /* 画像がボックスの幅に合わせてリサイズ */
+  height: auto; /* 高さは自動で調整 */
+}
+
+/* テキストボックスのスタイル */
+.ftext_box {
+  flex: 1; /* テキストボックスが残りのスペースを占める */
+  display: flex;
+  flex-direction: column; /* 縦方向に配置 */
+}
+
+
+
+
+.button_container {
+  text-align: center;
+}
+
+.map_button {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: black;
+  font-size: 0.5rem;
+  text-align: center;
+  width: 35%;
+}
+
+.map_button span {
+  font-size: 0.6rem;
+}
+
+.tabelog_button {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: orange;
+  font-size: 0.5rem;
+  width: 35%;
+}
+
+.tabelog_button span {
+  font-size: 0.6rem;
+}
+
+
+.footer_text {
+  display: flex;
+  background-color: #dec896;
+  margin-top: 0.5rem;
+  text-align: center;
+  height: 7vh;
+
+}
+
+.footer {
+  display: flex;
+}
 
 }
