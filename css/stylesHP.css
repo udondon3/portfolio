@@ -149,8 +149,8 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 600px;
-    height: 800px;
+    width: 50%;
+    height: 17%;
     background-color: #dec896;
     z-index: -1;
   }
@@ -159,6 +159,7 @@ body {
   .appeal_box {
     display: flex;
     justify-content: center;
+    margin-top: 2.8rem;
   }
 
   .appeal_text {

@@ -42,3 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error('要素が見つかりません。IDが正しいか確認してください。');
   }
 });
+
+
+// URLの#を消す
+window.addEventListener('load', function() {
+  if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname + window.location.search);
+  }
+});

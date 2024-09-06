@@ -89,7 +89,7 @@ body {
 
     .side_logo {
         height: 5rem;
-        cursor: pointer;
+         cursor: pointer;
     }
 
     .side_reserveBt {
@@ -216,8 +216,5 @@ body {
         /* 画像をレスポンシブに */
         height: auto;
     }
-
-
-
 
 }
