@@ -171,7 +171,7 @@ body {
     color: #333;
     cursor: pointer;
     top: 1rem; /* 上から1remの位置に設定 */
-    /* right: 1rem; */
+    right: 0.5rem;
     position: absolute; /* 絶対位置に設定 */
 
   }
