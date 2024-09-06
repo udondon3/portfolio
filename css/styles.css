@@ -39,6 +39,14 @@ body {
     display: none;
   }
 
+  .fimg_box {
+    display: none;
+  }
+  
+  .flink_container {
+    display: none;
+  }
+
 
   body::before {
     content: "";
@@ -160,8 +168,6 @@ body {
   /* ✕ボタンのスタイル */
   nav.gnavi .close-btn {
     position: absolute;
-    top: 20px;
-    right: 10px;
     background: none;
     border: none;
     font-size: 5rem;
@@ -284,27 +290,27 @@ body {
     padding: 2rem 0 0 5rem;
   }
 
-  .intr_ttitle {
+  .intr_title {
     display: flex;
     align-items: flex-start;
     padding-right: 3rem;
 
   }
 
-  .intr_ttitle p {
+  .intr_title p {
     font-size: 1.2rem;
     font-weight: 500;
   }
 
-  .intr_ttitle h1 {
+  .intr_title h1 {
     font-weight: 600;
     /* or font-weight: 700; */
 
     font-size: 2.5rem;
   }
 
-  .intr_ttitle h1,
-  .intr_ttitle p {
+  .intr_title h1,
+  .intr_title p {
     margin-right: 20px;
     writing-mode: vertical-rl;
     text-align: left;
@@ -546,15 +552,16 @@ body {
   .access_box {
     display: flex;
     justify-content: center;
-    /* 水平中央揃え */
     align-items: center;
-    /* 垂直中央揃え */
-    height: 30vh;
-    max-width: 100%;
+    margin: 3rem;
+  }
+
+  .iframe_map {
+    height: 15rem;
+    
   }
 
   .table_box {
-    padding-top: 10%;
     height: 280px;
     background-color: black;
   }
