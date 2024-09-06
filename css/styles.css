@@ -170,6 +170,10 @@ body {
     font-size: 5rem;
     color: #333;
     cursor: pointer;
+    top: 1rem; /* 上から1remの位置に設定 */
+    right: 1rem; /* 右から1remの位置に設定 */
+    position: absolute; /* 絶対位置に設定 */
+
   }
 
   .gnavi span {
