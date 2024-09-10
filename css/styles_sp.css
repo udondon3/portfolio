@@ -358,8 +358,8 @@
 
   .flower1 {
     position: absolute;
-    left: 10%;
-    bottom: 15vh;
+    left: 4rem;
+    bottom: 11rem;
     width: 0.8rem;
   }
 
@@ -372,8 +372,8 @@
 
   .flower3 {
     position: absolute;
-    left: 10%;
-    top: 10vh;
+    left: 3rem;
+    top: 3rem;
     width: 1rem;
   }
 

@@ -35,7 +35,7 @@ body {
 }
 
 
-/* ヘッダーとフッター共通 */
+/* モバイル */
 @media screen and (max-width: 767px) {
     :root {
         --menu-title-size: 1rem;
@@ -390,7 +390,7 @@ body {
     /* トップに戻るボタンのスタイル */
     .top_button {
         position: fixed;
-        bottom: 20px;
+        bottom: 50px;
         right: 20px;
         border-radius: 50%;
         /* ボタンを丸くする */
