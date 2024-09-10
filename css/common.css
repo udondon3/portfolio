@@ -37,7 +37,10 @@ body {
 
 /* ヘッダーとフッター共通 */
 @media screen and (max-width: 767px) {
-
+    :root {
+        --menu-title-size: 1rem;
+        --item-font-size: 1.5rem;
+    }
 
     .hide_sp {
         display: none;
