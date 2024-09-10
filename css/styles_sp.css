@@ -1,39 +1,10 @@
 @charset "UTF-8";
 
-
-/* * {
-  border: 1px solid #000;
-  box-sizing: border-box;
-} */
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-:root {
-  --main-bg-color: #fffddf;
-}
-
-body {
-  background-color: var(--main-bg-color);
-  position: relative;
-  font-family: "Noto Serif JP", serif;
-}
-
 @media screen and (max-width:768px) {
 
-  .hide_element {
+  .hide_sp {
     display: none;
   }
-
 
   .hero_top img:nth-of-type(1) {
     display: none;
@@ -387,8 +358,8 @@ body {
 
   .flower1 {
     position: absolute;
-    left: 4rem;
-    bottom: 11rem;
+    left: 10%;
+    bottom: 15vh;
     width: 0.8rem;
   }
 
@@ -401,8 +372,8 @@ body {
 
   .flower3 {
     position: absolute;
-    left: 3rem;
-    top: 3rem;
+    left: 10%;
+    top: 10vh;
     width: 1rem;
   }
 

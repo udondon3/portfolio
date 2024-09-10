@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+
+/* * {
+    border: 1px solid #000;
+    box-sizing: border-box;
+} */
+
+
+
+/* 基本設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #fffddf;
+    --menu-font-size: 2rem;
+    --menu-title-size: 2rem;
+    --item-font-size: 3.5rem;
+
+}
+
+body {
+    background-color: var(--main-bg-color);
+    position: relative;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 800;
+}
+
+
+/* ヘッダーとフッター共通 */
+@media screen and (max-width: 767px) {
+
+
+    .hide_sp {
+        display: none;
+    }
+
+
+    .hero_top img:nth-of-type(1) {
+        display: none;
+    }
+
+
+    .flink_container {
+        display: none;
+    }
+
+    .footer_buttons {
+        display: none;
+    }
+
+    .footer_background {
+        display: none;
+    }
+
+    /* ヘッダー基本スタイル */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+        border-bottom: #be944e 2px solid;
+    }
+
+    /* ロゴのスタイル */
+    .logo img {
+        height: 40px;
+    }
+
+    /* ハンバーガーメニューボタンのスタイル */
+    .btn-gnavi {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+    .btn-gnavi span {
+        display: block;
+        width: 120%;
+        height: 4px;
+        background-color: black;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    /* ナビゲーションメニューのスタイル */
+    nav.gnavi {
+        position: fixed;
+        top: 0;
+        right: -340px;
+        width: 340px;
+        height: 100%;
+        background: #dec896;
+        transition: right 0.3s;
+        padding-top: 50px;
+        z-index: 99;
+    }
+
+    nav.gnavi ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    nav.gnavi ul li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    nav.gnavi ul li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    nav.gnavi ul:nth-child(2) {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    nav.gnavi ul:nth-child(2) li {
+        text-align: left;
+    }
+
+    /* ハンバーガーメニューが開いた状態のスタイル */
+    nav.gnavi.open {
+        right: 0;
+        z-index: 99;
+    }
+
+    /* ハンバーガーメニューアニメーション */
+    .btn-gnavi.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .btn-gnavi.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .btn-gnavi.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* ✕ボタンのスタイル */
+    nav.gnavi .close-btn {
+        background: none;
+        border: none;
+        font-size: 5rem;
+        color: #333;
+        cursor: pointer;
+        top: 0.5rem;
+        right: 0.2rem;
+        position: absolute;
+        /* 絶対位置に設定 */
+        height: 5rem;
+        /* 高さを設定 */
+        width: 5rem;
+        /* 幅を設定 */
+
+    }
+
+    .gnavi span {
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+
+    .side_logo {
+        max-width: 60%;
+        padding-bottom: 10%;
+    }
+
+    /* タイトルロゴ */
+    .title_logoImg {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        margin: auto;
+
+    }
+
+    .tabelog_button span {
+        font-size: 0.6rem;
+    }
+
+    .side_tabelogBt {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid orange;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: orange;
+        font-size: 0.6rem;
+    }
+
+    .svg_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .button_box {
+        display: flex;
+        background-color: black;
+        border-radius: 60%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+    .button-icon {
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+
+
+    .table_box {
+        height: 280px;
+        background-color: black;
+    }
+
+    .table_box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 画像を親要素に合わせてサイズ調整 */
+    }
+
+    .flogo_box {
+        padding-top: 1rem;
+        text-align: center;
+
+    }
+
+    .flogo_box img {
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .button_container {
+        text-align: center;
+    }
+
+    .map_button {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: black;
+        font-size: 0.5rem;
+        text-align: center;
+        width: 35%;
+    }
+
+    .map_button span {
+        font-size: 0.6rem;
+    }
+
+    .tabelog_button {
+        text-align: center;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: orange;
+        font-size: 0.5rem;
+        width: 35%;
+    }
+
+    .tabelog_button span {
+        font-size: 0.6rem;
+    }
+
+    .side_tabelogBt {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid orange;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: orange;
+        font-size: 0.6rem;
+    }
+
+    .footer_section {
+        width: 90%;
+        margin: auto;
+    }
+
+    .text_item {
+        font-size: 0.8rem;
+    }
+
+    .phone_number {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+    }
+
+    .text_align {
+        width: 20%;
+    }
+
+    .footer_text {
+        display: flex;
+        background-color: #dec896;
+        margin-top: 0.5rem;
+        text-align: center;
+        height: 7vh;
+
+    }
+
+    .link_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        width: 90%;
+
+    }
+
+    .link_item {
+        text-decoration: none;
+        margin: 0 10px;
+        color: black;
+    }
+
+    .svg_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .button_box {
+        display: flex;
+        background-color: black;
+        border-radius: 60%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+    .button-icon {
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+
+    .footer {
+        background-color: #be944e;
+        height: 10vh;
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .footer img {
+        max-width: 50%;
+
+    }
+
+    .phone_box {
+        width: 2rem;
+        height: 100%;
+
+    }
+
+    /* トップに戻るボタンのスタイル */
+    .top_button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        /* ボタンを丸くする */
+        padding: 10px;
+        z-index: 1000;
+        display: none;
+
+    }
+
+    .top_button a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .top_button img {
+        width: 50px;
+        height: 50px;
+        display: block;
+    }
+
+
+}

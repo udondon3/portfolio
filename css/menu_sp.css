@@ -1,36 +1,7 @@
 @charset "UTF-8";
 
-/* 基本設定 */
-html {
-    scroll-behavior: smooth;
-}
-
-/* * {
-    border: 1px solid #000;
-    box-sizing: border-box;
-} */
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --main-bg-color: #fffddf;
-    --menu-font-size: 2rem;
-    --menu-menu_text: 2rem;
-}
-
-body {
-    background-color: var(--main-bg-color);
-    position: relative;
-    font-family: "Noto Serif JP", serif;
-}
 
 @media screen and (max-width: 767px) {
-
- 
 
     .menu_top {
         text-align: center;
@@ -47,7 +18,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 20%;
         background-image: url(../img/syabu-bg.jpg);
         background-repeat: no-repeat;
         background-position: center center;
@@ -63,7 +34,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 20%;
         background: #be954e70;
         z-index: -1;
     }
@@ -75,7 +46,7 @@ body {
     /* メニュー */
     .menu_title {
         text-align: center;
-        font-size: var(--menu-font-size);
+        font-size: var(--menu-title-size);
         margin: 2rem;
     }
 
@@ -93,27 +64,27 @@ body {
     }
 
     .menu_img img {
-        width: 100%;
+        width: 75%;
         height: auto;
     }
 
     .menu_text {
-        font-size: var(--menu-menu_text);
+        font-size: var(--menu-title-size);
         width: 100%;
         display: block;
         box-sizing: border-box;
         border-bottom: black 2px solid;
-        line-height: 1.5;
+        line-height: 1;
     }
 
     .add_title {
         text-align: center;
-        font-size: var(--menu-font-size);
+        font-size: var(--menu-title-size);
     }
 
     .item_price {
         display: block;
-        width: 100%;
+        width: 90%;
         text-align: center;
         margin: 1rem 0;
 
@@ -130,8 +101,18 @@ body {
         width: 100%;
         table-layout: fixed;
         border-collapse: collapse;
-        font-size: 2rem;
-        margin: 0;
+        font-size: var(--item-font-size);
+        margin: 1rem;
+        white-space: nowrap;
+        width: 100%;
+        /* 幅を調整して親要素内で収める */
+        overflow: hidden;
+        /* はみ出した部分を非表示にする */
+    }
+
+    .line_break::before  {
+        content: "\A";
+        white-space: pre;
 
     }
 
@@ -139,7 +120,7 @@ body {
         border: none;
         text-align: center;
         padding: 0.5rem;
-        line-height: 1.5;
+        line-height: 1;
         border-bottom: black 2px solid;
     }
 
@@ -162,11 +143,11 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 35%;
         background-image: url(../img/nabe-bg.jpg);
         background-repeat: no-repeat;
         background-position: center calc(100% - 70%);
-        background-size: cover;
+        background-size: auto;
         filter: blur(1px);
         background-blend-mode: multiply;
         z-index: -1;
@@ -178,7 +159,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 35%;
         background: #be954e70;
         z-index: -1;
     }
@@ -190,7 +171,7 @@ body {
     /* お鍋 */
     .onabe_title {
         text-align: center;
-        font-size: var(--menu-font-size);
+        font-size: var(--menu-title-size);
         margin: 2rem;
     }
 
@@ -208,13 +189,13 @@ body {
     }
 
     .onabe_img img {
-        width: 100%;
+        width: 75%;
         height: auto;
     }
 
     .menu_price {
-        font-size: var(--menu-menu_text);
-        line-height: 1.5;
+        font-size: var(--menu-title-size);
+        line-height: 1;
     }
 
     .ippin_title,
@@ -222,38 +203,15 @@ body {
     .bottle_title {
         position: relative;
         overflow: hidden;
-        height: 30vh;
+
     }
 
     .ippin_title::before,
     .drink_title::before,
     .bottle_title::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/ippin-bg.jpg);
-        background-repeat: no-repeat;
-        background-position: center calc(100% - 100%);
-        background-size: cover;
-        filter: blur(1px);
-        background-blend-mode: multiply;
-        z-index: -1;
-    }
 
-    .ippin_title::after,
-    .drink_title::after,
-    .bottle_title::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #be954e70;
-        z-index: -1;
+        background-image: none;
+
     }
 
     .ippin_title>*,
@@ -276,7 +234,17 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
+        font-size: 0.8rem;
     }
+
+
+    .tax_display h1 {
+        display: flex;
+        width: 75%;
+        padding-top: 2.5rem;
+        margin: auto;
+    }
+
 
 
 

@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/menu_hp.css" />
   <link rel="stylesheet" href="css/menu_sp.css" />
-  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/common.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
@@ -37,11 +37,11 @@
             class="close-btn">&times;</button></li>
       </ul>
       <ul>
-        <li><a href="index.html#introduction" class="side_text">CONCEPT<span>コンセプト</span></a>
-        </li>
+        <li><a href="index.html" class="side_text">TOP<span>トップ</span></a></li>
+        <li><a href="index.html#introduction" class="side_text">CONCEPT<span>コンセプト</span></a></li>
         <li><a href="#" class="side_text">MENU<span>メニュー</span></a></li>
         <li><a href="index.html#access" class="side_text">ACCESS<span>アクセス</span></a></li>
-        <li class="hide_element"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt"
+        <li class="hide_sp"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt"
             target="_blank">予約する</a></li>
       </ul>
       <ul>
@@ -77,7 +77,7 @@
       <div class="menu_item">
         <div class="menu_box">
           <div class="menu_img">
-            <img src="img/beef.png" alt="牛しゃぶ">
+            <img src="img/beef-syabu.jpg" alt="牛しゃぶ">
           </div>
           <div class="menu_text">
             <p>牛しゃぶ</p>
@@ -88,7 +88,7 @@
         </div>
         <div class="menu_box">
           <div class="menu_img">
-            <img src="img/beef.png" alt="豚しゃぶ">
+            <img src="img/pork-syabu.jpg" alt="豚しゃぶ">
           </div>
           <div class="menu_text">
             <p>豚しゃぶ</p>
@@ -99,7 +99,7 @@
         </div>
         <div class="menu_box">
           <div class="menu_img">
-            <img src="img/beef.png" alt="牛・豚しゃぶミックス">
+            <img src="img/porkandbeef.png" alt="牛・豚しゃぶミックス">
           </div>
           <div class="menu_text">
             <p>牛・豚ミックス</p>
@@ -140,7 +140,7 @@
               <td>4,500円</td>
             </tr>
             <tr>
-              <td>追加の牛・豚ミックス(ハーフ)</td>
+              <td>追加の牛・豚ミックス<span class="line_break">(ハーフ)</span></td>
               <td>2,300円</td>
             </tr>
             <tr>
@@ -167,7 +167,7 @@
       <div class="onabe_item">
         <div class="onabe_box">
           <div class="onabe_img">
-            <img src="img/beef.png" alt="もつ鍋">
+            <img src="img/motu.jpg" alt="もつ鍋">
           </div>
           <div class="menu_text">
             <p>もつ鍋</p>
@@ -178,7 +178,7 @@
         </div>
         <div class="onabe_box">
           <div class="onabe_img">
-            <img src="img/beef.png" alt="すき焼き">
+            <img src="img/sukiyaki.jpg" alt="すき焼き">
           </div>
           <div class="menu_text">
             <p>すき焼き</p>
@@ -246,7 +246,7 @@
               <td>800円</td>
             </tr>
             <tr>
-              <td>アイスクリーム（バニラ・チョコ・柚子）</td>
+              <td>アイスクリーム<span class="line_break">（バニラ・チョコ・柚子）</span></td>
               <td>800円</td>
             </tr>
           </table>
@@ -311,7 +311,7 @@
               <td>800円</td>
             </tr>
             <tr>
-              <td>酎ハイ（プレーン・レモン・ライム・カルピス）</td>
+              <td>酎ハイ（プレーン・<span class="line_break"></span>レモン・ライム・カルピス）</td>
               <td>800円</td>
             </tr>
             <tr>
@@ -343,7 +343,7 @@
               <td>700円</td>
             </tr>
             <tr>
-              <td>ワインハーフボトル（赤・白）</td>
+              <td>ワインハーフボトル<span class="line_break">（赤・白）</span></td>
               <td>2,500円</td>
             </tr>
             <tr>
@@ -351,11 +351,11 @@
               <td>800円</td>
             </tr>
             <tr>
-              <td>※ソーダ・ウーロン・緑茶割り</td>
+              <td>※ソーダ・ウーロン・<span class="line_break">緑茶割り</span></td>
               <td>+100円</td>
             </tr>
             <tr>
-              <td>ウイスキー（サントリー角瓶・ブラックニッカ）</td>
+              <td>ウイスキー<span class="line_break">（サントリー角瓶・</span><span class="line_break">ブラックニッカ）</span></td>
               <td>800円</td>
             </tr>
             <tr>
@@ -499,6 +499,7 @@
         </div>
 
         <div class="link_container">
+          <a href="index.html" class="link_item">TOP</a>
           <a href="#introduction" class="link_item">CONCEPT</a>
           <a href="#" class="link_item">MENU</a>
           <a href="#access" class="link_item">ACCESS</a>
@@ -570,8 +571,9 @@
           </a>
         </div>
         <div class="flink_container">
+          <a href="index.html" class="link_item">TOP</a>
           <a href="index.html#introduction" class="link_item">CONCEPT</a>
-          <a href="#" class="link_item">MENU</a>
+          <a href="menu.html" class="link_item">MENU</a>
           <a href="index.html#access" class="link_item">ACCESS</a>
         </div>
       </div>
@@ -581,9 +583,10 @@
       <img src="img/title-logo.png" alt="ロゴ画像" />
     </div>
     <div class="flink_container hide_hp">
-      <a href="#" onclick="scrollToSection(event,'introduction')" class="link_item">CONCEPT</a>
+      <a href="index.html" class="link_item">TOP</a>
+      <a href="index.html#introduction""  class=" link_item">CONCEPT</a>
       <a href="menu.html" class="link_item">MENU</a>
-      <a href="#" onclick="scrollToSection(event,'access')" class="link_item">ACCESS</a>
+      <a href="index.html#access" class="link_item">ACCESS</a>
     </div>
     <div class="footer_buttons hide_hp">
       <a href="https://x.com/shabu_house" class="button_box">

@@ -1,38 +1,9 @@
 @charset "UTF-8";
 
-/* 基本設定 */
-html {
-    scroll-behavior: smooth;
-}
-
-/* * {
-    border: 1px solid #000;
-    box-sizing: border-box;
-} */
-
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --main-bg-color: #fffddf;
-    --menu-font-size: 2rem;
-    --menu-menu_text: 2rem;
-
-}
-
-body {
-    background-color: var(--main-bg-color);
-    position: relative;
-    font-family: "Noto Serif JP", serif;
-}
 
 @media screen and (min-width: 768px) {
-    
 
+    
     /* ヘッダー関連 */
     .logo {
         display: none;
@@ -133,9 +104,8 @@ body {
 
     .syabu_section {
         position: relative;
-        /* 擬似要素を位置付けるための設定 */
         overflow: hidden;
-        /* 擬似要素が親要素を超えないようにする */
+ 
     }
 
     .syabu_section::before {
@@ -209,7 +179,7 @@ body {
     }
 
     .menu_text {
-        font-size: var(--menu-menu_text);
+        font-size: var(--menu-title-size);
         width: 100%;
         display: block;
         box-sizing: border-box;
@@ -241,7 +211,7 @@ body {
         width: 100%;
         table-layout: fixed;
         border-collapse: collapse;
-        font-size: 3.5rem;
+        font-size: var(--item-font-size);
         margin: 0 10rem;
     }
 
@@ -347,7 +317,7 @@ body {
     }
 
     .menu_price {
-        font-size: var(--menu-menu_text);
+        font-size: var(--menu-title-size);
         line-height: 0;
     }
 
@@ -709,7 +679,7 @@ body {
         /* ボタンを丸くする */
         padding: 10px;
         z-index: 1000;
-        display: none; /* 初期状態では非表示 */
+        display: none; 
 
     }
 

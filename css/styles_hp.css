@@ -1,33 +1,8 @@
 @charset "UTF-8";
 
-/* 基本設定 */
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --main-bg-color: #fffddf;
-}
-
-body {
-  background-color: var(--main-bg-color);
-  position: relative;
-  font-family: "Noto Serif JP", serif;
-}
 
 @media screen and (min-width: 768px) {
 
-  /* 全体のボックスモデル設定 */
-  /* * {
-    border: 1px solid #000;
-    box-sizing: border-box;
-  } */
 
   /* ヘッダー関連 */
   .logo {
@@ -73,7 +48,7 @@ body {
   }
 
   .hide_hp {
-    display: none;
+    display: none !important;
   }
 
   /* ナビゲーションバー */
@@ -167,6 +142,16 @@ body {
     max-width: 100%;
     text-align: center;
     display: block;
+    background-image: url('../img/koushi1.svg');
+    background-size: 14%;
+    background-position: top left, ;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1200px) {
+    .appeal_text {
+      background-image: none;
+    }
   }
 
   .appeal_text h1 {
@@ -203,17 +188,21 @@ body {
   .concept_section {
     display: flex;
     justify-content: center;
-    /* 水平方向に中央寄せ */
     align-items: center;
-    /* 垂直方向に中央寄せ */
-    width: 80%;
-    margin-left: 7rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0rem;
+    background-image: url('../img/koushi2.svg'), url('../img/koushi1.svg');
+    background-size: 10rem, 8rem;
+    background-position: right top, left calc(100% + 20rem);
+    background-repeat: no-repeat;
   }
 
-  .introduction_content {
-    width: 100%;
-    flex: 8;
-
+  @media (max-width: 1200px) {
+    .concept_section {
+      background-image: none;
+      /* 背景画像を削除 */
+    }
   }
 
   /* 横並び設定 */
@@ -222,15 +211,26 @@ body {
     align-items: center;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    /* 要素が改行しないようにする */
+    /* これを必要に応じてオフにする */
     overflow: hidden;
-    /* コンテナからはみ出た部分を隠す */
 
   }
 
+  @media (max-width: 768px) {
+    .introduction {
+      flex-direction: column;
+      /* 小さい画面では縦並びにする */
+      flex-wrap: wrap;
+    }
+  }
+
   .intr_box {
-    flex: 1 1 auto;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    /* 縦並びにする */
+    align-items: center;
+    /* 中央揃え */
+    margin: 1rem;
   }
 
   /* 縦横の逆配置 */
@@ -248,6 +248,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 4rem;
   }
 
   .intr_title {
@@ -255,6 +256,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .intr_sideTex {
+    text-align: center;
   }
 
   .intr_flex {
@@ -273,6 +278,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    /* テキストを中央揃え */
   }
 
   /* 花の非表示 */
@@ -309,13 +316,16 @@ body {
   .menu_contents {
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
 
   }
 
   .menu_column {
     display: flex;
+    position: relative;
     flex-direction: column-reverse;
-    margin: 3rem;
+    flex-wrap: break-word;
+    flex: 1;
   }
 
   .menu_contents .menu_column:nth-child(2) {
@@ -324,42 +334,51 @@ body {
 
   .menu_box {
     flex-direction: row-reverse;
+    position: relative;
+    margin: 0;
+    width: 60%;
+    margin-top: 5rem;
   }
 
   .menu_contents .menu_column:nth-child(3) .menu_box {
     flex-direction: row;
   }
 
-  /* h1 要素の順序を逆に設定 */
   .menu_box h1 {
-    margin: 0;
-    /* マージンの調整 */
+    writing-mode: vertical-rl;
+    font-size: 3rem;
+    text-align: center;
   }
 
   .menu_box h1.tex_span {
     order: 2;
-    /* 右側に表示されるように設定 */
+    font-size: 1.2rem;
+    line-height: 0;
+    margin: 0;
   }
 
   .menu_box h1:not(.tex_span) {
     order: 1;
-    /* 左側に表示されるように設定 */
   }
 
   .menu_box,
   .menu_text {
     flex: 1;
     display: flex;
-    align-items: center;
   }
 
-  .menu_box h1 {
-    writing-mode: vertical-rl;
+
+  .title_style {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
   }
 
-  .menu_img {
-    max-width: 70%;
-    height: auto;
+  .text_men {
+    margin: 0;
+    text-align: left;
   }
 
   .menu_text {
@@ -369,6 +388,25 @@ body {
 
   }
 
+  .vage_style {
+    margin: 10px 0;
+  }
+
+  .beef_title {
+    margin: 0;
+
+  }
+
+  beef_style {
+    margin: 0;
+  }
+
+  /* 画像の設定 */
+  .menu_img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 
   /* "もっと見る" ボタンのスタイル */
@@ -390,7 +428,7 @@ body {
     /* アンダーラインを削除 */
     font-weight: bold;
     font-size: 1rem;
-
+    margin-top: 5rem;
   }
 
   .access_tiBox {
@@ -587,6 +625,36 @@ body {
     height: 70px;
     width: 100%;
   }
+
+  /* トップに戻るボタンのスタイル */
+  .top_button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    /* ボタンを丸くする */
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+
+  }
+
+  .top_button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .top_button img {
+    width: 80px;
+    /* アイコンの幅 */
+    height: 80px;
+    /* アイコンの高さ */
+    display: block;
+  }
+
+
 
 
 }

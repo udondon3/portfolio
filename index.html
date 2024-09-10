@@ -14,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles_sp.css" />
   <link rel="stylesheet" href="css/styles_hp.css" />
-  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/common.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="logo">
       <img src="img/logo.png" alt="ロゴ画像" />
     </div>
@@ -37,11 +37,11 @@
             class="close-btn">&times;</button></li>
       </ul>
       <ul>
-        <li><a href="#" onclick="scrollToSection(event,'introduction')" class="side_text">CONCEPT<span>コンセプト</span></a>
-        </li>
+        <li><a href="index.html" class="side_text">TOP<span>トップ</span></a></li>
+        <li><a href="#" onclick="scrollToSection(event,'introduction')" class="side_text">CONCEPT<span>コンセプト</span></a></li>
         <li><a href="menu.html" class="side_text">MENU<span>メニュー</span></a></li>
         <li><a href="#" onclick="scrollToSection(event,'access')" class="side_text">ACCESS<span>アクセス</span></a></li>
-        <li class="hide_element"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt"
+        <li class="hide_sp"><a href="https://tabelog.com/osaka/A2701/A270101/27004229/" class="side_reserveBt"
             target="_blank">予約する</a></li>
       </ul>
       <ul>
@@ -219,10 +219,10 @@
           <div class="menu_box">
             <img class="menu_img" src="img/beef.png" alt="黒毛和牛" />
             <h1 class="tex_span">しゃぶしゃぶ</h1>
-            <h1>《松坂牛》</h1>
+            <h1 class="beef_title">《松坂牛》</h1>
           </div>
           <div class="menu_text">
-            <p>肉、本来の旨味を味わっていただけるように<br />
+            <p class="beef_style">肉、本来の旨味を味わっていただけるように<br />
               秘伝のダシ湯であっさり仕立てました</p>
             <div class="flower_box">
               <img class="flower4" src="img/flower3.png" alt="お花">
@@ -232,11 +232,11 @@
 
         <div class="menu_column">
           <div class="menu_box">
-            <img class="menu_img" src="img/vegetables.png" alt="柑橘類" />
+            <img class="menu_img" src="img/vegetables.png" alt="新鮮野菜" />
             <h1>《新鮮野菜》</h1>
           </div>
           <div class="menu_text">
-            <p>秘伝のダシ湯で野菜本来の旨味が<br />
+            <p class="vage_style">秘伝のダシ湯で野菜本来の旨味が<br />
               ギュッと凝縮され特製ポン酢、<br />
               ごまだれと相性抜群です。</p>
             <div class="flower_box">
@@ -250,7 +250,7 @@
             <img class="menu_img" src="img/men.png" alt="〆麺" />
             <h1>《〆麺》</h1>
           </div>
-          <div class="menu_text">
+          <div class="menu_text text_men">
             <p>肉や野菜の濃縮された秘伝のダシ湯とからむ、<br />
               細さ、食べ応えのあるコシの強さを<br />
               両方兼ね備えたラーメンです。</p>
@@ -259,8 +259,8 @@
             </div>
           </div>
         </div>
-
       </div>
+
       <div class="more_menuBt">
         <a href="menu.html" class="more_button">もっと見る</a>
       </div>
@@ -331,6 +331,7 @@
         </div>
 
         <div class="link_container">
+          <a href="index.html" class="link_item">TOP</a>
           <a href="#introduction" class="link_item">CONCEPT</a>
           <a href="#" class="link_item">MENU</a>
           <a href="#access" class="link_item">ACCESS</a>
@@ -350,7 +351,7 @@
         </a>
       </div>
 
-      </section>
+    </section>
   </main>
 
   <footer class="footer">
@@ -358,6 +359,7 @@
       <img src="img/title-logo.png" alt="ロゴ画像" />
     </div>
     <div class="flink_container">
+      <a href="index.html" class="link_item">TOP</a>
       <a href="#" onclick="scrollToSection(event,'introduction')" class="link_item">CONCEPT</a>
       <a href="menu.html" class="link_item">MENU</a>
       <a href="#" onclick="scrollToSection(event,'access')" class="link_item">ACCESS</a>
@@ -376,6 +378,13 @@
 
   </footer>
   <div class="footer_background"></div>
+
+  <div class="top_button" id="top_button" onclick="scrollToSection(event,'header')">
+    <a href="#header" title="topへ戻る">
+      <img src="img/top.svg" alt="topへ戻る">
+    </a>
+  </div>
+
 
   <script src="js/script.js"></script>
 </body>
