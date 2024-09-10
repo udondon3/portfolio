@@ -45,8 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // URLの#を消す
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   if (window.location.hash) {
-      window.history.replaceState(null, null, window.location.pathname + window.location.search);
+    window.history.replaceState(null, null, window.location.pathname + window.location.search);
+  }
+});
+
+
+// スクロールに応じてボタンを表示/非表示にする処理
+window.addEventListener('scroll', function () {
+  var button = document.getElementById('top_button');
+  if (window.scrollY > 600) { 
+    button.style.display = 'block';
+  } else {
+    button.style.display = 'none';
   }
 });

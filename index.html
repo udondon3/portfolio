@@ -12,8 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/stylesHP.css" />
+  <link rel="stylesheet" href="css/styles_sp.css" />
+  <link rel="stylesheet" href="css/styles_hp.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
@@ -32,7 +33,8 @@
     </div>
     <nav class="gnavi">
       <ul>
-        <li><img class="side_logo"  id="side_logoBt" src="img/title-logo.png" alt="ロゴ画像" /><button class="close-btn">&times;</button></li>
+        <li><img class="side_logo" id="side_logoBt" src="img/title-logo.png" alt="ロゴ画像" /><button
+            class="close-btn">&times;</button></li>
       </ul>
       <ul>
         <li><a href="#" onclick="scrollToSection(event,'introduction')" class="side_text">CONCEPT<span>コンセプト</span></a>
@@ -120,7 +122,7 @@
       </div>
     </div>
 
-    <div class="concept_section">
+    <section class="concept_section">
       <div class="introduction_content" id="introduction">
         <div class="introduction">
           <div class="intr_box">
@@ -193,9 +195,9 @@
       </div>
 
 
-    </div>
+    </section>
 
-    <div class="menu_section" id="menu">
+    <section class="menu_section" id="menu">
       <div class="title_box">
         <h1>&nbsp;M&nbsp;E&nbsp;N&nbsp;U</h1>
         <p>
@@ -282,13 +284,13 @@
           style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <div class="table_box">
+      <div class="table_box hide_hp">
         <img src="img/table.jpg" alt="テーブルの画像" />
       </div>
 
-    </div>
+    </section>
 
-    <div class="footer_section">
+    <section class="footer_section">
       <div class="fimg_box">
         <img src="img/table.jpg" alt="テーブルの画像" />
       </div>
@@ -310,11 +312,11 @@
             新三ツ輪ビル　1F</p>
         </div>
 
-        <div class="footer_text">
+        <div class="footer_text phone_items">
           <p class="text_item text_align">電話番号</p>
           <img class="phone_box" src="img/phone.svg" alt="電話アイコン">
           <a class="phone_number" href="tel:06-6345-0106">
-           06-6345-0106
+            06-6345-0106
           </a>
         </div>
 
@@ -348,8 +350,7 @@
         </a>
       </div>
 
-    </div>
-    </div>
+      </section>
   </main>
 
   <footer class="footer">
@@ -361,7 +362,20 @@
       <a href="menu.html" class="link_item">MENU</a>
       <a href="#" onclick="scrollToSection(event,'access')" class="link_item">ACCESS</a>
     </div>
+    <div class="footer_buttons">
+      <a href="https://x.com/shabu_house" class="button_box">
+        <img src="img/x.svg" alt="X(旧Twitter)アイコン" class="button-icon">
+      </a>
+      <a href="https://www.instagram.com/syabuhouse/" class="button_box">
+        <img src="img/insta.svg" alt="インスタグラムアイコン" class="button-icon">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100051502822705" class="button_box">
+        <img src="img/fb.svg" alt="フェイスブックアイコン" class="button-icon">
+      </a>
+    </div>
+
   </footer>
+  <div class="footer_background"></div>
 
   <script src="js/script.js"></script>
 </body>

@@ -1,0 +1,732 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* * {
+    border: 1px solid #000;
+    box-sizing: border-box;
+} */
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #fffddf;
+    --menu-font-size: 2rem;
+    --menu-menu_text: 2rem;
+
+}
+
+body {
+    background-color: var(--main-bg-color);
+    position: relative;
+    font-family: "Noto Serif JP", serif;
+}
+
+@media screen and (min-width: 768px) {
+    
+
+    /* ヘッダー関連 */
+    .logo {
+        display: none;
+    }
+
+    .fimg_box {
+        display: none;
+    }
+
+    .btn-gnavi {
+        visibility: hidden;
+    }
+
+    .title_logoImg {
+        display: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    .gnavi ul:nth-of-type(3) {
+        display: none;
+    }
+
+    .gnavi ul li .side_text span {
+        display: none;
+    }
+
+    .svg_buttons {
+        display: none;
+    }
+
+    .footer_section {
+        display: none;
+    }
+
+    .hide_hp {
+        display: none !important;
+    }
+    
+
+    .side_text a,
+    .side_tabelogBt {
+        text-decoration: none;
+        display: block;
+    }
+
+
+    /* ナビゲーションバー */
+    .gnavi {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: #be944e 2px solid;
+    }
+
+    .gnavi ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    .gnavi li {
+        margin: 0 15px;
+    }
+
+    .gnavi a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .side_logo {
+        height: 5rem;
+        cursor: pointer;
+    }
+
+    .side_reserveBt {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: black;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .gnavi p {
+        color: #fff;
+        margin: 0;
+    }
+
+
+    .menu_top {
+        text-align: center;
+    }
+
+    .syabu_section {
+        position: relative;
+        /* 擬似要素を位置付けるための設定 */
+        overflow: hidden;
+        /* 擬似要素が親要素を超えないようにする */
+    }
+
+    .syabu_section::before {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-image: url(../img/syabu-bg.jpg);
+        /* 背景画像を指定 */
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        filter: blur(1px);
+        /* 画像をぼやけさせる */
+        background-blend-mode: multiply;
+        /* フィルターのブレンドモードを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .syabu_section::after {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: #be954e70;
+        /* 黄色いオーバーレイを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .syabu_section>* {
+        position: relative;
+        /* コンテンツが擬似要素の上に表示されるように設定 */
+    }
+
+    /* メニュー */
+    .menu_title {
+        text-align: center;
+        font-size: var(--menu-font-size);
+        margin: 4rem;
+    }
+
+    .menu_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        text-align: center;
+        margin: 0 4rem;
+
+    }
+
+    .menu_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu_text {
+        font-size: var(--menu-menu_text);
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        border-bottom: black 2px solid;
+        line-height: 0;
+    }
+
+    .add_title {
+        text-align: center;
+        font-size: var(--menu-font-size);
+    }
+
+    .item_price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .add_box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+
+    .add_table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        font-size: 3.5rem;
+        margin: 0 10rem;
+    }
+
+    .add_table tbody {
+        margin: 0;
+    }
+
+
+
+
+    .add_table td {
+        border: none;
+        text-align: center;
+        padding: 0;
+        line-height: 1.5;
+        border-bottom: black 4px solid;
+        white-space: nowrap;
+
+    }
+
+    .add_table td:first-child {
+        text-align: left;
+    }
+
+    .add_table td:nth-child(2) {
+        text-align: right;
+    }
+
+
+    .onabe_section {
+        position: relative;
+        /* 擬似要素を位置付けるための設定 */
+        overflow: hidden;
+        /* 擬似要素が親要素を超えないようにする */
+    }
+
+    .onabe_section::before {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-image: url(../img/nabe-bg.jpg);
+        /* 背景画像を指定 */
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 70%);
+        background-size: cover;
+        filter: blur(1px);
+        /* 画像をぼやけさせる */
+        background-blend-mode: multiply;
+        /* フィルターのブレンドモードを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .onabe_section::after {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background: #be954e70;
+        z-index: -1;
+    }
+
+    .onabe_section>* {
+        position: relative;
+    }
+
+    /* お鍋 */
+    .onabe_title {
+        text-align: center;
+        font-size: var(--menu-font-size);
+        margin: 4rem;
+    }
+
+    .onabe_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .onabe_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+        text-align: center;
+        margin: 4rem;
+
+    }
+
+    .onabe_img img {
+        width: 100%;
+        /* 画像をレスポンシブに */
+        height: auto;
+    }
+
+    .menu_price {
+        font-size: var(--menu-menu_text);
+        line-height: 0;
+    }
+
+
+
+    .ippin_title {
+        position: relative;
+        overflow: hidden;
+        height: 40vh;
+    }
+
+    .ippin_title::before {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/ippin-bg.jpg);
+        /* 背景画像を指定 */
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 100%);
+        background-size: cover;
+        /* 画像のサイズをカバーに設定 */
+        filter: blur(1px);
+        /* 画像をぼやけさせる */
+        background-blend-mode: multiply;
+        /* フィルターのブレンドモードを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .ippin_title::after {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #be954e70;
+        /* 黄色いオーバーレイを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .ippin_title>* {
+        position: relative;
+        /* コンテンツが擬似要素の上に表示されるように設定 */
+    }
+
+
+    .ippin_title h1 {
+        margin-top: 6rem;
+    }
+
+
+
+
+    .drink_title {
+        position: relative;
+        /* 擬似要素を位置付けるための設定 */
+        overflow: hidden;
+        /* 擬似要素が親要素を超えないようにする */
+        height: 40vh;
+    }
+
+    .drink_title::before {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/drink-bg.jpg);
+        /* 背景画像を指定 */
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 70%);
+        background-size: cover;
+        /* 画像のサイズをカバーに設定 */
+        filter: blur(1px);
+        /* 画像をぼやけさせる */
+        background-blend-mode: multiply;
+        /* フィルターのブレンドモードを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .drink_title::after {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #be954e70;
+        /* 黄色いオーバーレイを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .drink_title>* {
+        position: relative;
+        /* コンテンツが擬似要素の上に表示されるように設定 */
+    }
+
+    .drink_title h1 {
+        margin-top: 6rem;
+    }
+
+
+    .bottle_title {
+        position: relative;
+        /* 擬似要素を位置付けるための設定 */
+        overflow: hidden;
+        /* 擬似要素が親要素を超えないようにする */
+        height: 40vh;
+    }
+
+    .bottle_title::before {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/bottle-bg.jpeg);
+        /* 背景画像を指定 */
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 55%);
+        background-size: cover;
+        /* 画像のサイズをカバーに設定 */
+        filter: blur(1px);
+        /* 画像をぼやけさせる */
+        background-blend-mode: multiply;
+        /* フィルターのブレンドモードを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .bottle_title::after {
+        content: "";
+        /* 擬似要素のコンテンツを空に設定 */
+        position: absolute;
+        /* 絶対位置で配置 */
+        top: -5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #be954e70;
+        /* 黄色いオーバーレイを設定 */
+        z-index: -1;
+        /* 擬似要素をコンテンツの後ろに配置 */
+    }
+
+    .bottle_title>* {
+        position: relative;
+        /* コンテンツが擬似要素の上に表示されるように設定 */
+    }
+
+    .bottle_title h1 {
+        margin-top: 6rem;
+    }
+
+
+    .tax_display {
+        display: flex;
+        /* フレックスボックスで配置 */
+        background-color: #dec896;
+        width: 100%;
+        height: 30vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+    }
+
+
+    .footer {
+        display: flex;
+
+        align-items: flex-start;
+        padding: 1rem;
+        flex-wrap: wrap;
+        margin: 5rem;
+    }
+
+    .footer_logo,
+    .footer_text1,
+    .footer_text2 {
+        flex: 1;
+        margin: 0.5rem;
+    }
+
+    .footer_logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer_text1,
+    .footer_text2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .footer_text1 div,
+    .footer_text2 div {
+        display: flex;
+        flex: 1;
+        /* 各divを均等に広げる */
+        align-items: center;
+
+    }
+
+
+    .footer_text1 p,
+    .footer_text2 p {
+        flex: 1;
+        margin: 0 2rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .footer_text1 div,
+    .footer_text2 div {
+        display: flex;
+        align-items: center;
+        /* background-color: #dec896; */
+        margin: 0.5rem;
+    }
+
+    .bg_collar {
+        background-color: #dec896;
+    }
+
+
+
+    .footer_text1 div p,
+    .footer_text2 div p {
+        height: 8vh;
+    }
+
+    .button_container a {
+        margin-top: 2rem;
+    }
+
+    .fsvg_buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .button_box {
+        display: inline-block;
+    }
+
+    .button-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .map_button {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: black;
+        font-size: 0.5rem;
+        text-align: center;
+        width: 60%;
+    }
+
+    .map_button span {
+        font-size: 0.6rem;
+    }
+
+
+    .tabelog_button {
+        text-align: center;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: orange;
+        font-size: 0.5rem;
+        width: 60%;
+    }
+
+    .tabelog_button span {
+        font-size: 0.6rem;
+    }
+
+    .footer_buttons {
+        flex: 1;
+        display: flex;
+
+    }
+
+    .button_box {
+        margin-left: 10px;
+        display: flex;
+        background-color: black;
+        border-radius: 60%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px;
+    }
+
+    .button-icon {
+        width: 70%;
+        height: 70%;
+        margin: auto;
+    }
+
+
+
+    .link_item {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .phone_box {
+        width: 2rem;
+    }
+
+    .phone_number {
+        font-size: large;
+    }
+
+    .footer_background {
+        background-color: #be944e;
+        height: 70px;
+        width: 100%;
+    }
+
+    /* トップに戻るボタンのスタイル */
+    .top_button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        /* ボタンを丸くする */
+        padding: 10px;
+        z-index: 1000;
+        display: none; /* 初期状態では非表示 */
+
+    }
+
+    .top_button a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .top_button img {
+        width: 80px;
+        /* アイコンの幅 */
+        height: 80px;
+        /* アイコンの高さ */
+        display: block;
+    }
+
+
+}
